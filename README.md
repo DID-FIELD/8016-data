@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Face Preprocessing Pipeline for GFPGAN Training
 
 
@@ -140,3 +141,6 @@ python scripts/generate\_examples.py
 4. **Dependencies**: See `ENV_SETUP.md` for exact version requirements (Python 3.11.15, OpenCV 4.13.0, etc.)
 
 
+=======
+# 8016-data
+>>>>>>> 8d2cf70ca17e5d14fefe4a716c128cf40493550c
