@@ -1,0 +1,22 @@
+8016project/
+├── run_all_conda.bat
+├── README.md
+├── ENV_SETUP.md
+├── Folder_Structure.txt
+├── scripts/
+│   ├── preprocess.py
+│   ├── fix_04646.py
+│   ├── degrade.py
+│   ├── dataset.py
+│   ├── generate_examples.py
+│   ├── extract_random_subset.py
+│   ├── utils.py
+│   └── shape_predictor_68_face_landmarks.dat
+└── data/
+    ├── raw/
+    │   └── rawsubset/
+    ├── processed/
+    │   └── 256x256/
+    ├── degraded/
+    │   └── 256x256/
+    └── compare/

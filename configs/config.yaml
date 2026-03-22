@@ -1,0 +1,27 @@
+# config.yaml (comments in English)
+# Preprocessing config (face alignment + normalization)
+preprocess:
+  dlib_model_path: "E:\\8016project\\scripts\\shape_predictor_68_face_landmarks.dat"  # Update to your model path
+  target_size:
+    arcface: [112, 112]    # For identity encoder (if needed)
+    swinir: [256, 256]     # For quality branch (your task)
+  padding: 5              # Face cropping padding (avoid cutting face edges)
+  normalize_range: [0, 1]  # Pixel range after normalization (0-1 for model input)
+
+# Degradation config (reference: GFPGAN paper)
+degrade:
+  blur:
+    gaussian:
+      kernel_size: [3, 5, 7]  # Random kernel size for Gaussian blur
+      sigma: [0.5, 1.0, 2.0]  # Random sigma for Gaussian blur
+    motion:
+      kernel_size: [5, 7]     # Random kernel size for motion blur
+      angle: [0, 45, 90, 135, 180]  # Random angle for motion blur
+  noise:
+    gaussian:
+      mean: 0
+      std: [10, 20, 30]       # Random std for Gaussian noise
+    salt_pepper:
+      prob: [0.01, 0.02]      # Random noise probability for salt-pepper noise
+  order: ["blur", "noise"]    # Degradation order: blur first, then noise
+  randomize: true             # Randomly select blur/noise type for each image
